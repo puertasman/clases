@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Navidad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .mountains-of-christmas-regular {
+            font-family: "Mountains of Christmas", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .mountains-of-christmas-bold {
+            font-family: "Mountains of Christmas", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+        }
+
+        .texto {
+            font-family: 'Mountains of Christmas', 'Courier New', Courier, monospace;
+            font-size: 60px;
+            font-weight: bold;
+            text-align: center;
+            color: #ff6347;
+            text-shadow: 2px 2px 0  #fff, 0 0 25px #ff6347, 0 0 5px #070707; 
+            margin-bottom: 20px; 
+            letter-spacing: 5px;
+        }
+
+        .arbol {
+            position: relative;
+            width: 200px;
+            height: 450px;
+        }
+
+        .rama {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2e8b57; /* Verde */
+        }
+
+        .rama1 {
+            top: 0;
+            width: 120px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .rama2 {
+            top: 80px;
+            width: 160px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .rama3 {
+            top: 160px;
+            width: 200px;
+            height: 140px;
+            border-radius: 50%;
+        }
+
+        .rama4 {
+            top: 240px;
+            width: 240px;
+            height: 160px;
+            border-radius: 50%;
+        }
+
+        .tronco {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 60px;
+            height: 80px;
+            background-color: #8b4513;
+            transform: translateX(-50%);
+        }
+
+        /* Estilo para las bolas del árbol */
+        .bola {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            animation: cambiarColor 3s infinite alternate ease-in-out;
+        }
+
+        /* Distribución de bolas */
+        .bola1 {
+            top: 20px;
+            left: 60px;
+            background-color: #ff6347;
+            animation-duration: 3s;
+            animation-delay: 0.2s;
+        }
+
+        .bola2 {
+            top: 60px;
+            left: 40px;
+            background-color: #32cd32;
+            animation-duration: 1.5s;
+            animation-delay: 0.3s;
+        }
+
+        .bola3 {
+            top: 40px;
+            left: 110px;
+            background-color: #ffa500; /* Naranja */
+            animation-duration: 3s;
+            animation-delay: 0.7s;
+        }
+
+        .bola4 {
+            top: 100px;
+            left: 20px;
+            background-color: #00bfff;
+            animation-duration: 3s;
+            animation-delay: 0.7s;
+        }
+
+        .bola5 {
+            top: 120px;
+            left: 140px;
+            background-color: #ff1493;
+            animation-duration: 1.3s;
+            animation-delay: 0.1s;
+        }
+
+        .bola6 {
+            top: 160px;
+            left: 50px;
+            background-color: #ffd700;
+            animation-duration: 2.3s;
+            animation-delay: 0.2s;
+        }
+
+        .bola7 {
+            top: 230px;
+            left: 170px;
+            background-color: #ff4500; 
+        }
+
+        .bola8 {
+            top: 250px;
+            left: 80px;
+            background-color: #8a2be2;
+            animation-duration: 2s;
+            animation-delay: 0.7s;
+        }
+
+        .bola9 {
+            top: 180px;
+            left: 120px;
+            background-color: #ff69b4; 
+            animation-duration: 2.5s;
+            animation-delay: 0.4s;
+        }
+
+        .bola10 {
+            top: 190px;
+            left: 50px;
+            background-color: #7fff00; 
+            animation-duration: 1s;
+            animation-delay: 0.8s;
+        }
+
+        .bola11 {
+            top: 270px;
+            left: 120px;
+            background-color: #dc143c; 
+            animation-duration: 3s;
+            animation-delay: 0.7s;
+        }
+
+        .bola12 {
+            top: 310px;
+            left: 30px;
+            background-color: #adff2f; 
+            animation-duration: 2s;
+            animation-delay: 0.2s;
+        }
+        @keyframes cambiarColor {
+            0% {
+                filter: brightness(1) saturate(1); 
+            }
+            50% {
+                filter: brightness(1.5) saturate(1.5); 
+            }
+            100% {
+                filter: brightness(0.7) saturate(0.8); 
+            }
+        }
+</style>
+</head>
+<body>
+    <div class="texto">Feliz<br>Navidad</div>
+    <div class="arbol">
+        <div class="tronco"></div>
+        <div class="rama rama1"></div>
+        <div class="rama rama2"></div>
+        <div class="rama rama3"></div>
+        <div class="rama rama4"></div>
+        <!-- Bolas del árbol -->
+        <div class="bola bola1"></div>
+        <div class="bola bola2"></div>
+        <div class="bola bola3"></div>
+        <div class="bola bola4"></div>
+        <div class="bola bola5"></div>
+        <div class="bola bola6"></div>
+        <div class="bola bola7"></div>
+        <div class="bola bola8"></div>
+        <div class="bola bola9"></div>
+        <div class="bola bola10"></div>
+        <div class="bola bola11"></div>
+        <div class="bola bola12"></div>
+    </div>
+    <button onclick="alert([...document.body.children].map(el => el.tagName).join(', '))">
+        Clica
+    </button>
+</body>
+</html>

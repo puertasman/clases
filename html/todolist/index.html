@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+    <!--  -->
+    <input type="nuevaTarea" id="nuevaTarea" placeholder="Escribe tu tarea">
+    <button onclick="agregarTarea()">Agregar tarea</button>
+    <p id="tareaVacia">La tarea tiene que tener un nombre. </p>
+    <!-- Esto sólo se verán en el caso de que el input esté en blanco -->
+
+    <ul id="listaTareas">
+        <!-- Aquí van las tareas, se van a ir añadiendo elementos li -->
+    </ul>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body{
+    font-family: Arial, sans-seif;
+    text-align: center;
+    margin: 20px;
+}
+
+#tareaVacia{
+    display: none;
+}
+
+li {
+    max-width: 800px;
+    margin: 10px auto;
+    list-style-type: none;
+    padding: 10px;
+    background-color: #f9f9f9; /* Fondo claro */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+li i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #f1f1f1; /* Fondo más oscuro al pasar el mouse */
+}

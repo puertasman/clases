@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.despParrafo{
+            transition: padding 0.1s linear;
+        }
+        p.despParrafo:hover{
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Cambiar colores</h1>
+    <div class="parrafosNumero">
+    <p class="pp">soy un párrafo</p>
+    <p>soy un párrafo</p>
+    <p>soy un párrafo</p>
+    <p>soy un párrafo</p>
+    <p>soy un párrafo</p>
+    <p>soy un párrafo</p>
+    <p>soy un párrafo</p>
+    </div>
+    <p><button id="btnCambiar" onclick="cambiarColor()">Cambiar colores</button></p>
+    <p><button id="addParrafo" onClick="addParrafo()">Otro párrafo</button></p>
+    <p><button id="resetParrafos" onClick="reset()">Reset estilos</button></p>
+
+<script>
+        let btnCambiar = document.querySelector('#btnCambiar');
+        function cambiarColor(){
+            let parrafos = document.querySelectorAll('.parrafosNumero p');
+
+        document.querySelector('#titulo').innerHTML = 'Cambiado';
+        parrafos.forEach((parrafo,index)=>
+        {
+            parrafo.innerHTML = parrafo.innerHTML.replace('un','el');
+            if (!parrafo.innerHTML.includes(index)){
+                parrafo.innerHTML = parrafo.innerHTML + ' ' + (index +1);
+                parrafo.classList.add('despParrafo');
+            }
+            if(index % 2 == 0){
+                parrafo.style.color = 'blue'
+            }else{   
+                parrafo.style.color = 'red'
+            }
+        })
+        
+    }
+
+    function reset(){
+        let parrafos = document.querySelectorAll('.parrafosNumero p');
+        parrafos.forEach((parrafo,index)=>
+        {
+            parrafo.innerHTML = parrafo.innerHTML.replace('el','un');
+            parrafo.innerHTML = parrafo.innerHTML.replace(' ' + (index +1),'');
+            parrafo.classList.remove('despParrafo');
+            parrafo.style.color = 'black';
+        })
+    }
+
+    function addParrafo(){
+            let nuevoParrafo = document.createElement('p');
+            nuevoParrafo.innerHTML = 'soy un párrafo';
+            parrafosNumero = document.querySelector('.parrafosNumero');
+            parrafosNumero.appendChild(nuevoParrafo);
+            if(document.querySelector('#titulo').innerHTML == 'Cambiado'){
+                cambiarColor();
+            }
+        }
+
+
+    </script>
+</body>
+</html>

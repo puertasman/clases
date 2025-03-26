@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li.tachado {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de la compra</h1>
+    <ul id="listaCompra">
+        <!-- Aquí van los elementos de la lista de la compra -->
+    </ul>
+
+    <script>
+        function cargarLista(lista){
+            let ul = document.getElementById('listaCompra')
+            for (let i = 0; i < lista.length; i++) {
+                let li = document.createElement('li')
+                li.textContent = Object.keys(lista[i])[0]
+                if (!lista[i][Object.keys(lista[i])[0]]) {
+                    li.classList.add('tachado')
+                }
+                else{
+                    li.textContent += ' ' + Object.values(lista[i])[0][1]
+                }
+                ul.appendChild(li)
+            }
+        }
+        list = [{'manzanas':[true,3]}, {'peras':[true,2]}, {'kiwis':false}, {'zanahorias':[true,5]}]
+        cargarLista(list)
+    </script>
+</body>
+</html>

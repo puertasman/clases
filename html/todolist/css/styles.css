@@ -1,0 +1,13 @@
+body{
+    font-family: Arial, sans-seif;
+    text-align: center;
+    margin: 20px;
+}
+
+#tareaVacia{
+    display: none;
+}
+
+li{
+    margin: 10px 0;
+}

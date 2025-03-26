@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button#btnClick{
+            display: none;
+            padding: 40px 50px;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button#btnEmpezar{
+            padding: 40px 50px;
+            font-size: 1.2em;
+            background-color: rgb(43, 247, 70);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contador de clicks</h1>
+        <p>Has hecho click <span id="contador">0</span> veces</p>
+        <button id="btnEmpezar" onclick="empezar()">Comenzar</button>
+        <button id="btnClick" onclick="incrementarContador()">Haz click</button>
+        <p id="contadorTiempo">Tiempo: <span id="tiempo">0</span></p>
+    </div>
+
+    <script>
+        let contador = 0;
+        let btnClick = document.querySelector('#btnClick')
+        let contadorSpan = document.querySelector('#contador')
+        function incrementarContador(){
+            contador++
+            contadorSpan.textContent = contador
+        }
+
+        function empezar(){
+            //alert('Comenzamos')
+            btnClick.style.display = 'inline-block'
+            btnEmpezar.style.display = 'none'
+            document.querySelector('#contadorTiempo').style.display = 'block'
+            let tiempo = 3
+            let tiempoSpan = document.querySelector('#tiempo')
+            tiempoSpan.textContent = tiempo
+            let interval = setInterval(()=>{
+                tiempo--
+                tiempoSpan.textContent = tiempo
+                if(tiempo == 0){
+                    clearInterval(interval)
+                    alert(`Se acabó el tiempo, has hecho ${contador} clicks`)
+                    btnClick.style.display = 'none'
+                    btnEmpezar.style.display = 'inline-block'
+                    document.querySelector('#contadorTiempo').style.display = 'none'
+                    contador = 0
+                    contadorSpan.textContent = contador
+                }
+            },1000)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: relative;
+            margin: 10px;
+            transition: filter 0.5s, transform 0.5s, z-index 0.5s; /*mejor aquí*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Imatges<button onclick="addImages()">Añadir imágenes</button>
+    </h1>
+    <div class="imagenes"></div>
+
+<script>
+    function ferGran(img) {
+        img.style.transform = "scale(1.2)";
+        img.style.transition = "0.5s";
+    }
+
+    function ferPetit(img) {
+        img.style.transform = "scale(1)";
+    }
+
+    function addImages() {
+            const div = document.querySelector('.imagenes');
+            const img = document.createElement('img');
+            let i = div.children.length + 1;
+            img.style.filter = "grayscale(100%)"
+            img.src = `https://picsum.photos/400/300?random=${i}`;
+            img.onmouseover = function() {
+                img.style.filter = "grayscale(0)"
+                img.style.transform = "scale(1.2)";
+                img.style.transition = "0.5s";
+                this.style.zIndex = "100"
+            }
+            img.onmouseout = function() {
+                ferPetit(this);
+                img.style.filter = "grayscale(100%)"
+                        img.style.transform = "scale(1)";
+
+                this.style.zIndex = "0"
+            }
+            div.appendChild(img);
+        
+    }
+    for (let i = 0; i < 10; i++) {
+        addImages();
+    }
+    </script>
+</body>
+</html>

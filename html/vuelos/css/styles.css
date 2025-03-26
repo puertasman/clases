@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#borrarFiltros{
+    display: flex;
+    justify-content: center;
+    max-width: 150px;
+    margin: 20px auto;
+    border: 2px solid #5254ee;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#companiesLogos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+#companiesLogos img{
+    width: 100px;
+    margin: 10px;
+}
+
+img.logo{
+    width: 100px;
+    margin-left: 5px;
+}
+#tablaVuelos .sinResultados{
+    text-align: center;
+    font-size: 20px;
+}
+
+#tablaVuelos tr:nth-child(odd){
+    background-color: rgba(0, 0, 200, 0.1);
+}
+
+#tablaVuelos tr:nth-child(even){
+    background-color: rgba(0, 0, 200, 0.3);
+}
+
+#tablaVuelos tr{
+    height: 75px;
+}
+
+#tablaVuelos td{
+    background-color: transparent !important;
+}
+
+#tablaVuelos td span{
+    margin-left: 10px;
+}

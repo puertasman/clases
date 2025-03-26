@@ -1,0 +1,68 @@
+.mesa {
+    border: 1px solid #ccc;
+    min-height: 70px;
+    width: 150px;
+    margin: 5px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+  }
+
+  .mesa-group {
+    display: flex;
+    justify-content: center;
+  }
+
+.mesaProfesor{
+    background-color: #ffe5b4;
+    font-weight: bold;
+    font-size: 1.4em;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+
+}
+
+  .alumno {
+padding: 5px 10px;
+background-color: #cce5ff;
+cursor: grab;
+border-radius: 4px;
+text-align: center;
+
+/* Centrado total con Flexbox */
+display: flex;
+align-items: center;   /* centrado vertical */
+justify-content: center; /* centrado horizontal */
+
+height: 60px; /* Asegura altura uniforme */
+
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+line-clamp: 3;         /* número máximo de líneas */
+-webkit-box-orient: vertical;
+transition: all 0.2s;
+}
+.alumno:hover{
+    cursor: grabbing;
+}
+  .alumno:active {
+    cursor: grabbing;
+  }
+
+.mesa .alumno{
+    width: 100%;
+    height: 100%;
+}
+  .dropzone {
+    flex: 1;
+  }
+
+  #lista-alumnos .alumno {
+    flex: 0 1 calc(10% + 20px); 
+    text-align: center;
+  }

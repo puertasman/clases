@@ -1,0 +1,1 @@
+f"Se ha creado una persona llamada {self.nombre} de {self.edad} años."

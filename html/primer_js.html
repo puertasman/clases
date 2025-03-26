@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="body.style.backgroundColor='#f00'">Clica en el botón</button>
+    <h1>Lista de Vuelos</h1>
+    <ul id="listaVuelos"></ul>
+    <button onclick="filtrarVuelos()">Filtrar vuelos</button>
+    <input type="time" id="horaInicial">
+    <input type="time" id="horaFinal">
+    <button onclick="filtrarVuelosHorarios()">Filtrar vuelos por horarios</button>
+    <script>
+        const vuelos = [
+        { id: 'RY484', pasajeros: 150, origen: 'Madrid', destino: 'Barcelona', maxPasajeros: 180, horaSalida: '08:00', duracion: '2h' },
+            { id: 'AF123', pasajeros: 120, origen: 'Paris', destino: 'Londres', maxPasajeros: 150, horaSalida: '09:00', duracion: '1h' },
+            { id: 'DL456', pasajeros: 100, origen: 'Nueva York', destino: 'Los Angeles', maxPasajeros: 200, horaSalida: '10:00', duracion: '6h' },
+            { id: 'JL789', pasajeros: 80, origen: 'Tokio', destino: 'Osaka', maxPasajeros: 100, horaSalida: '11:00', duracion: '1h' },
+            { id: 'QF101', pasajeros: 90, origen: 'Sídney', destino: 'Melbourne', maxPasajeros: 120, horaSalida: '12:00', duracion: '1h' },
+            { id: 'AC202', pasajeros: 110, origen: 'Toronto', destino: 'Vancouver', maxPasajeros: 130, horaSalida: '06:00', duracion: '5h' },
+            { id: 'AZ303', pasajeros: 140, origen: 'Roma', destino: 'Milán', maxPasajeros: 160, horaSalida: '06:05', duracion: '1h' },
+            { id: 'LH404', pasajeros: 130, origen: 'Berlín', destino: 'Múnich', maxPasajeros: 140, horaSalida: '15:00', duracion: '1h' },
+            { id: 'SU505', pasajeros: 160, origen: 'Moscú', destino: 'San Petersburgo', maxPasajeros: 180, horaSalida: '16:00', duracion: '2h' },
+            { id: 'CA606', pasajeros: 170, origen: 'Pekín', destino: 'Shanghái', maxPasajeros: 190, horaSalida: '17:00', duracion: '2h' },
+            { id: 'EK707', pasajeros: 180, origen: 'Dubai', destino: 'Abu Dhabi', maxPasajeros: 200, horaSalida: '18:00', duracion: '1h' },
+            { id: 'AR808', pasajeros: 190, origen: 'Buenos Aires', destino: 'Santiago', maxPasajeros: 210, horaSalida: '19:00', duracion: '2h' },
+            { id: 'LA909', pasajeros: 200, origen: 'Lima', destino: 'Bogotá', maxPasajeros: 220, horaSalida: '20:00', duracion: '3h' },
+            { id: 'AM010', pasajeros: 210, origen: 'Ciudad de México', destino: 'Cancún', maxPasajeros: 230, horaSalida: '21:00', duracion: '2h' },
+            { id: 'AA111', pasajeros: 220, origen: 'Miami', destino: 'Orlando', maxPasajeros: 240, horaSalida: '22:00', duracion: '1h' },
+            { id: 'UA212', pasajeros: 230, origen: 'San Francisco', destino: 'Las Vegas', maxPasajeros: 250, horaSalida: '23:00', duracion: '1h' },
+            { id: 'WN313', pasajeros: 240, origen: 'Chicago', destino: 'Houston', maxPasajeros: 260, horaSalida: '00:00', duracion: '2h' },
+            { id: 'DL414', pasajeros: 250, origen: 'Atlanta', destino: 'Dallas', maxPasajeros: 270, horaSalida: '01:00', duracion: '2h' },
+            { id: 'AS515', pasajeros: 260, origen: 'Seattle', destino: 'Portland', maxPasajeros: 280, horaSalida: '02:00', duracion: '1h' },
+            { id: 'B617', pasajeros: 270, origen: 'Boston', destino: 'Washington D.C.', maxPasajeros: 290, horaSalida: '03:00', duracion: '1h' }
+        ];
+
+        const listaVuelos = document.getElementById('listaVuelos');
+        vuelos.forEach(vuelo => {
+            const li = document.createElement('li');
+            li.textContent = `ID: ${vuelo.id}, Pasajeros: ${vuelo.pasajeros}, Origen: ${vuelo.origen}, Destino: ${vuelo.destino}, Pasajeros Máximos: ${vuelo.maxPasajeros}, Hora de Salida: ${vuelo.horaSalida}, Duración: ${vuelo.duracion}`;
+            listaVuelos.appendChild(li);
+        });
+        function filtrarVuelosDisponibilidad(){
+            vuelos.filter(vuelo => vuelo.pasajeros <= vuelo.maxPasajeros).forEach(vuelo => {
+                alert(vuelo.id);
+                const li = document.createElement('li');
+                li.textContent = `ID: ${vuelo.id}, Pasajeros: ${vuelo.pasajeros}, Origen: ${vuelo.origen}, Destino: ${vuelo.destino}, Pasajeros Máximos: ${vuelo.maxPasajeros}, Hora de Salida: ${vuelo.horaSalida}, Duración: ${vuelo.duracion}`;
+                listaVuelos.appendChild(li);
+            });
+        }
+        function filtrarVuelosHorarios(){
+            let horaInicial = document.querySelector('#horaInicial').value;
+            let horaFinal = document.querySelector('#horaFinal').value;
+            horaFinal ? horaFinal: horaFinal = '23:59';
+            horaInicial ? horaInicial: horaInicial = '00:00';
+            listaVuelos.innerHTML = '';
+            vuelos.filter(vuelo => vuelo.horaSalida >= horaInicial && vuelo.horaSalida <= horaFinal).forEach(vuelo => {
+                const li = document.createElement('li');
+                li.textContent = `ID: ${vuelo.id}, Pasajeros: ${vuelo.pasajeros}, Origen: ${vuelo.origen}, Destino: ${vuelo.destino}, Pasajeros Máximos: ${vuelo.maxPasajeros}, Hora de Salida: ${vuelo.horaSalida}, Duración: ${vuelo.duracion}`;
+                listaVuelos.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

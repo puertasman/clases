@@ -1,4 +1,31 @@
 export const peliculas = [
+  "The Godfather",
+  "Citizen Kane",
+  "Schindler's List",
+  "The Godfather: Part II",
+  "Pulp Fiction",
+  "The Good, the Bad and the Ugly",
+  "12 Angry Men",
+  "The Lord of the Rings: The Fellowship of the Ring",
+  "Forrest Gump",
+  "The Silence of the Lambs",
+  "Casablanca",
+  "A Clockwork Orange",
+  "The Shining",
+  "Apocalypse Now",
+  "City of God",
+  "Seven Samurai",
+  "Star Wars: Episode IV - A New Hope",
+  "Back to the Future",
+  "The Matrix",
+  "American History X",
+  "Fight Club",
+  "Gladiator",
+  "Taxi Driver",
+  "Life Is Beautiful"
+];
+
+/* export const peliculas = [
   { titulo: "El Padrino", director: "Francis Ford Coppola", año: 1972, img : "https://hips.hearstapps.com/vidthumb/images/portada-el-padrino-video-trailer-1645722017.jpg" },
   { titulo: "Ciudadano Kane", director: "Orson Welles", año: 1941, img : "https://m.media-amazon.com/images/I/91rTbiXm8gL._SY679_.jpg" },
   { titulo: "La lista de Schindler", director: "Steven Spielberg", año: 1993, img : "https://m.media-amazon.com/images/I/71zE4QJ6-jL._AC_SY679_.jpg" },
@@ -24,3 +51,4 @@ export const peliculas = [
   { titulo: "Taxi Driver", director: "Martin Scorsese", año: 1976, img : "https://m.media-amazon.com/images/I/81kPBt0c2-L._SY679_.jpg" },
   { titulo: "La vida es bella", director: "Roberto Benigni", año: 1997, img : "https://m.media-amazon.com/images/I/91+Jvq4xeTL._SY679_.jpg" }
 ];
+*/

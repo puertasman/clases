@@ -32,6 +32,6 @@ else{
           console.warn(`No encontrada: ${titulo}`)
         }
       })
-      .catch(err => console.error("Error al cargar película:", err))
+      .catch(err => console.error("Error al cargar película: ", err))
   })
-}
+} 

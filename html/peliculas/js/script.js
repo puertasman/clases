@@ -1,5 +1,6 @@
 import { peliculas } from './peliculas.js';
 
+peliculas.sort();
 
 const apiKey = "3be066e6";
 let contenedor = document.querySelector("#peliculas")

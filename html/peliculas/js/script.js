@@ -6,7 +6,7 @@ const apiKey = "3be066e6";
 let contenedor = document.querySelector("#peliculas")
 
 if (peliculas.length == 0) {
-  contenedor.textContent = "No hay peliculas";
+  contenedor.textContent = "No hay peliculas para mostrar";
 } else {
   const promesas = peliculas.map(titulo => 
       fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(titulo)}&apikey=${apiKey}`)

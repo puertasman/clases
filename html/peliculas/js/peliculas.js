@@ -1,5 +1,6 @@
 export const peliculas = [
   "Indiana Jones",
+  "Zootopia",
   "The Godfather",
   "Citizen Kane",
   "Schindler's List",

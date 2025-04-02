@@ -25,31 +25,3 @@ export const peliculas = [
   "Taxi Driver",
   "Life Is Beautiful"
 ];
-
-/* export const peliculas = [
-  { titulo: "El Padrino", director: "Francis Ford Coppola", año: 1972, img : "https://hips.hearstapps.com/vidthumb/images/portada-el-padrino-video-trailer-1645722017.jpg" },
-  { titulo: "Ciudadano Kane", director: "Orson Welles", año: 1941, img : "https://m.media-amazon.com/images/I/91rTbiXm8gL._SY679_.jpg" },
-  { titulo: "La lista de Schindler", director: "Steven Spielberg", año: 1993, img : "https://m.media-amazon.com/images/I/71zE4QJ6-jL._AC_SY679_.jpg" },
-  { titulo: "El Padrino II", director: "Francis Ford Coppola", año: 1974, img : "https://m.media-amazon.com/images/I/81v9c6So-hL._AC_SY679_.jpg" },
-  { titulo: "Pulp Fiction", director: "Quentin Tarantino", año: 1994, img : "https://m.media-amazon.com/images/I/91gYmFS5OzL._SY679_.jpg" },
-  { titulo: "El bueno, el malo y el feo", director: "Sergio Leone", año: 1966, img : "https://m.media-amazon.com/images/I/81tG3-KwtcL._SY679_.jpg" },
-  { titulo: "12 hombres sin piedad", director: "Sidney Lumet", año: 1957, img : "https://m.media-amazon.com/images/I/71X0w82LDwL._SY679_.jpg" },
-  { titulo: "La trilogía de El Señor de los Anillos", director: "Peter Jackson", año: "2001-2003", img : "https://m.media-amazon.com/images/I/71Stl95-kSL._SY679_.jpg" },
-  { titulo: "Forrest Gump", director: "Robert Zemeckis", año: 1994, img : "https://m.media-amazon.com/images/I/81Wz9-V0JvL._SY679_.jpg" },
-  { titulo: "El silencio de los corderos", director: "Jonathan Demme", año: 1991, img : "https://m.media-amazon.com/images/I/91vf58FF3nL._SY679_.jpg" },
-  { titulo: "Casablanca", director: "Michael Curtiz", año: 1942 , img : "https://m.media-amazon.com/images/I/71SPjGcAkQL._SY679_.jpg" },
-  { titulo: "La naranja mecánica", director: "Stanley Kubrick", año: 1971, img : "https://m.media-amazon.com/images/I/91z0FGsmn0L._SY679_.jpg" },
-  { titulo: "El resplandor", director: "Stanley Kubrick", año: 1980, img : "https://m.media-amazon.com/images/I/71Txdp0f-ML._SY679_.jpg" },
-  { titulo: "Apocalypse Now", director: "Francis Ford Coppola", año: 1979, img : "https://m.media-amazon.com/images/I/91tnYtTjcEL._SY679_.jpg" },
-  { titulo: "Ciudad de Dios", director: "Fernando Meirelles", año: 2002, img : "https://m.media-amazon.com/images/I/71P2dtpF6dL._SY679_.jpg" },
-  { titulo: "Los siete samuráis", director: "Akira Kurosawa", año: 1954, img : "https://m.media-amazon.com/images/I/91eWVb9z7fL._SY679_.jpg" },
-  { titulo: "Star Wars: Episodio IV - Una nueva esperanza", director: "George Lucas", año: 1977, img : "https://m.media-amazon.com/images/I/91XTtYae5-L._SY679_.jpg" },
-  { titulo: "Regreso al futuro", director: "Robert Zemeckis", año: 1985, img : "https://m.media-amazon.com/images/I/81u8O1D0i8L._SY679_.jpg" },
-  { titulo: "Matrix", director: "Lana y Lilly Wachowski", año: 1999 , img : "https://m.media-amazon.com/images/I/91zN8Qhd2qL._SY679_.jpg" },
-  { titulo: "American History X", director: "Tony Kaye", año: 1998, img : "https://m.media-amazon.com/images/I/81ZGlF6gDgL._SY679_.jpg" },
-  { titulo: "El club de la lucha", director: "David Fincher", año: 1999, img : "https://m.media-amazon.com/images/I/91hXbfgjBXL._SY679_.jpg" },
-  { titulo: "Gladiador", director: "Ridley Scott", año: 2000 , img : "https://m.media-amazon.com/images/I/91AkT5-Z8vL._SY679_.jpg" },
-  { titulo: "Taxi Driver", director: "Martin Scorsese", año: 1976, img : "https://m.media-amazon.com/images/I/81kPBt0c2-L._SY679_.jpg" },
-  { titulo: "La vida es bella", director: "Roberto Benigni", año: 1997, img : "https://m.media-amazon.com/images/I/91+Jvq4xeTL._SY679_.jpg" }
-];
-*/
